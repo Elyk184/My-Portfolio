@@ -32,6 +32,13 @@ class PortfolioApp {
 
     toggleDark() {
         document.body.classList.toggle("dark");
+        const btn = document.getElementById("themeBtn");
+
+        if (document.body.classList.contains("dark")) {
+            btn.textContent = "☀️";
+        } else {
+            btn.textContent = "🌙";
+        }
     }
 }
 
