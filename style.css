@@ -24,8 +24,7 @@ body.dark {
 body {
     background: var(--bg);
     color: var(--text);
-    line-height: 1.6;
-    padding-left: 230px;
+    padding-left: 240px;
 }
 
 /* ===== SIDEBAR ===== */
@@ -33,19 +32,19 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    width: 230px;
+    width: 240px;
     height: 100vh;
     background: var(--dark);
     color: white;
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
 }
 
-.sidebar .logo {
+.logo {
     text-align: center;
-    font-size: 26px;
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
 .sidebar ul {
@@ -67,27 +66,14 @@ body {
     color: #93c5fd;
 }
 
-.resume-btn {
-    margin-top: auto;
-    background: var(--primary);
-    padding: 12px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.resume-btn:hover {
-    background: #1d4ed8;
-}
-
+/* Dark mode button bottom */
 .dark-btn {
+    margin-top: auto;
     background: none;
     border: none;
-    color: white;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
+    color: white;
 }
 
 /* ===== CONTENT ===== */
@@ -108,23 +94,9 @@ body {
     border-radius: 18px;
 }
 
-.intro h1 {
-    font-size: 40px;
-}
-
 #role {
     color: var(--primary);
     font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.skills span {
-    display: inline-block;
-    background: rgba(37,99,235,0.1);
-    color: var(--primary);
-    padding: 6px 14px;
-    border-radius: 999px;
-    margin: 6px 6px 0 0;
 }
 
 .section {
@@ -149,6 +121,33 @@ body {
     object-fit: cover;
 }
 
+/* ===== RESUME ===== */
+.resume-preview {
+    width: 100%;
+    height: 600px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.resume-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.resume-download {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--primary);
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ===== SOCIAL ===== */
 .socials {
     display: flex;
     gap: 20px;
@@ -171,4 +170,19 @@ footer {
     padding: 24px;
     background: var(--dark);
     color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    body {
+        padding-left: 0;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
