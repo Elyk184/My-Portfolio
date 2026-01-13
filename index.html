@@ -22,10 +22,7 @@
         <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
 
-    <!-- Dark mode button at bottom -->
-    <button class="dark-btn" onclick="app.toggleDark()" id="themeBtn">
-        🌙
-    </button>
+    <button class="dark-btn" onclick="app.toggleDark()" id="themeBtn">🌙</button>
 </nav>
 
 <!-- ===== HOME ===== -->
@@ -63,29 +60,27 @@
 
     <div class="projects-grid">
         <div class="project-card">
-            <img src="pictures/project1.png">
+            <div class="project-image">
+                <img src="pictures/project1.png" alt="Project 1">
+            </div>
             <h3>Municipal Agriculture Office</h3>
             <p>Information System</p>
         </div>
 
         <div class="project-card">
-            <img src="pictures/IoT.jpg">
+            <div class="project-image">
+                <img src="pictures/IoT.jpg" alt="Project 2">
+            </div>
             <h3>NPK Sensing Device</h3>
             <p>Internet of Things (IoT)</p>
         </div>
     </div>
 </section>
 
-<!-- ===== RESUME PREVIEW ===== -->
+<!-- ===== RESUME ===== -->
 <section id="resume" class="section container">
     <h2>Resume</h2>
 
-    <!-- PDF Preview -->
-    <div class="resume-preview">
-        <iframe src="Resume.pdf"></iframe>
-    </div>
-
-    <!-- Download Button -->
     <a href="Resume.pdf" download class="resume-download">
         <i class="fas fa-download"></i> Download Resume
     </a>
