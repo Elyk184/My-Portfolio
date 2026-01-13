@@ -36,8 +36,8 @@ class PortfolioApp {
 
         if (document.body.classList.contains("dark")) {
             btn.textContent = "🌙";
-            btn.textContent = "☀️";
         } else {
+            btn.textContent = "☀️";
         }
     }
 }
