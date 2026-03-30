@@ -93,13 +93,18 @@ async function loadComponent(placeholderId, componentPath, componentName) {
 <nav class="navbar" id="navbar">
     <div class="nav-container">
         <h2 class="logo">ZKT</h2>
-        <ul class="nav-menu" id="nav-menu">
-            <li><a href="#home"><i class="fas fa-house"></i> Home</a></li>
-            <li><a href="#projects"><i class="fas fa-folder"></i> Projects</a></li>
-            <li><a href="#resume"><i class="fas fa-file-pdf"></i> Resume</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-        <button class="dark-btn" id="themeBtn">🌙</button>
+        <div class="nav-actions">
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home"><i class="fas fa-house"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#projects"><i class="fas fa-folder"></i> Projects</a></li>
+                <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li><a href="#certificates"><i class="fas fa-award"></i> Certificates</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#resume"><i class="fas fa-file-pdf"></i> Resume</a></li>
+            </ul>
+            <button class="dark-btn" id="themeBtn">🌙</button>
+        </div>
         <button class="hamburger" id="hamburger">
             <span></span>
             <span></span>

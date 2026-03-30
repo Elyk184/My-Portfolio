@@ -11,9 +11,10 @@
 }
 
 .nav-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 15px 40px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 15px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,13 +26,20 @@
     margin: 0;
 }
 
+.nav-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-right: 8px;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 24px;
     margin: 0;
-    flex: 1;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .nav-menu li a {
@@ -40,6 +48,7 @@
     display: flex;
     gap: 12px;
     font-weight: 500;
+    white-space: nowrap;
     transition: color 0.3s;
 }
 
@@ -80,6 +89,12 @@
 }
 
 @media (max-width: 900px) {
+    .nav-actions {
+        margin-left: 0;
+        padding-right: 0;
+        gap: 8px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -106,7 +121,7 @@
     }
 
     .nav-container {
-        padding: 15px 20px;
+        padding: 15px 0;
     }
 }
 
