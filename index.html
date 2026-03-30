@@ -6,23 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
 
-<!-- ===== SIDEBAR ===== -->
-<nav class="sidebar">
-    <h2 class="logo">ZKT</h2>
-
-    <ul>
-        <li><a href="#home"><i class="fas fa-house"></i> Home</a></li>
-        <li><a href="#projects"><i class="fas fa-folder"></i> Projects</a></li>
-        <li><a href="#resume"><i class="fas fa-file-pdf"></i> Resume</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-
-    <button class="dark-btn" onclick="app.toggleDark()" id="themeBtn">🌙</button>
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <h2 class="logo">ZKT</h2>
+        
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="#projects"><i class="fas fa-folder"></i> Projects</a></li>
+            <li><a href="#resume"><i class="fas fa-file-pdf"></i> Resume</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        
+        <button class="dark-btn" id="themeBtn">🌙</button>
+        
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
 </nav>
 
 <!-- ===== HOME ===== -->
@@ -40,7 +48,7 @@
             <p>
                 Hi, <b>I’m Zean Kyle C. Tapac</b>, an aspiring software developer with a strong interest in web development, Java-based systems, and IoT projects. I’m a dedicated and detail-oriented Computer Technician with hands-on experience in hardware installation and maintenance.</p>
 
-<p>I have practical skills in PC and laptop repair, printer maintenance, and basic software installation. I’m currently seeking opportunities to grow as a developer while applying my technical background to deliver efficient and dependable IT solutions.
+<p>I have practical skills in PC and laptop repair, printer maintenance, and basic software installation.I’m currently seeking opportunities to grow as a developer while applying my technical background to deliver efficient and dependable IT solutions.
             </p>
         </div>
 
