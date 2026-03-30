@@ -1,0 +1,9 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo Building static portfolio... && echo Build complete.",
+    "deploy": "npm run build"
+  }
+}

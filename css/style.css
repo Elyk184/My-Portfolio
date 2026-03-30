@@ -292,6 +292,23 @@ body {
     padding: 14px 16px 4px;
 }
 
+.nav-menu li a.active {
+    color: var(--primary);
+    position: relative;
+}
+
+.nav-menu li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
 .project-card p {
     padding: 0 16px 16px;
     color: #4c608a;

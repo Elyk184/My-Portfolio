@@ -51,6 +51,52 @@ class PortfolioApp {
                 }
             });
         });
+
+        // Smooth scroll for nav links
+        this.bindSmoothScroll();
+    }
+
+    bindSmoothScroll() {
+        document.querySelectorAll('#navbar a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    const navbarHeight = document.querySelector('#navbar')?.offsetHeight || 80;
+                    const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    }
+
+    initScrollSpy() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('#navbar a[href^="#"]');
+
+        const updateActiveLink = () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', updateActiveLink);
+        updateActiveLink(); // Initial call
     }
 
     toggleDark() {
@@ -66,6 +112,10 @@ class PortfolioApp {
     typeName() {
         const nameElement = document.getElementById("typing-name");
         if (!nameElement) return;
+
+        if (this.nameIndex === 0) {
+            nameElement.textContent = '';
+        }
 
         if (this.nameIndex < this.name.length) {
             nameElement.textContent += this.name.charAt(this.nameIndex);
@@ -138,6 +188,25 @@ document.addEventListener('DOMContentLoaded', async () => {
         loadComponent('navbar-placeholder', 'components/navbar.html', 'navbar'),
         loadComponent('footer-placeholder', 'components/footer.html', 'footer')
     ]);
-    new PortfolioApp();
+    const app = new PortfolioApp();
+    app.initScrollSpy();
+
+    // Handle browser hash changes
+    window.addEventListener('hashchange', () => {
+        setTimeout(() => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const target = document.getElementById(hash);
+                if (target) {
+                    const navbarHeight = document.querySelector('#navbar')?.offsetHeight || 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        }, 100);
+    });
 });
 
