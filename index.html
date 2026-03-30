@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
 </head>
 <body>
 
@@ -34,9 +32,15 @@
             </div>
 
             <div class="about about-hero">
-                <p>I am a 4th year IT student who enjoys working on both computer hardware and networking, with a strong interest in understanding how systems are built and how networks connect and communicate.</p>
-                <p>I like working hands-on with hardware components, troubleshooting issues, and configuring network setups while making sure everything runs efficiently and reliably.</p>
-                <p>Through <span>continuous learning and practical experience</span>, I aim to improve my technical skills in hardware, networking, and system support, and prepare myself for real-world IT environments.</p>
+                <span>“From hardware to software creating systems that work, connect, and perform.”</span>
+
+<p>I’m a 4th-year Information Technology student and aspiring software developer focused on building solutions in web development, Java-based systems, and IoT. I enjoy turning ideas into functional systems and continuously improving how they perform and connect in real-world environments.</p>
+
+<p>Alongside development, I bring hands-on experience as a Computer Technician, working with hardware installation, system maintenance, and troubleshooting. From repairing PCs and laptops to configuring networks and installing software, I take a practical, problem-solving approach to ensure systems run smoothly and efficiently.</p>
+
+<p>I’m especially interested in how systems are designed, how networks communicate, and how technology can be used to solve real-world challenges. I enjoy working both on the development side and behind the scenes—making sure everything is reliable, optimized, and built with purpose.</p>
+
+<p>Driven by curiosity and growth, I actively build projects and expand my technical skills. My goal is to become a well-rounded developer who can design, build, and maintain dependable systems that create real impact.</p>
             </div>
         </div>
     </div>
@@ -55,21 +59,21 @@
         <div class="skills-chip-group">
             <h3>Technical Skills</h3>
             <div class="skill-chips">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Java</span>
-                <span>IoT / ESP32</span>
+                <span><i class="fab fa-html5"></i>HTML</span>
+                <span><i class="fab fa-css3-alt"></i>CSS</span>
+                <span><i class="fab fa-js"></i>JavaScript</span>
+                <span><i class="fab fa-java"></i>Java</span>
+                <span><i class="fas fa-microchip"></i>IoT / ESP32</span>
             </div>
         </div>
 
         <div class="skills-chip-group">
             <h3>Hardware & IT Support Skills</h3>
             <div class="skill-chips">
-                <span>PC & Laptop Repair</span>
-                <span>Hardware Installation & Maintenance</span>
-                <span>Printer Maintenance</span>
-                <span>Basic Networking</span>
+                <span><i class="fas fa-tools"></i>PC & Laptop Repair</span>
+                <span><i class="fas fa-screwdriver-wrench"></i>Hardware Installation & Maintenance</span>
+                <span><i class="fas fa-print"></i>Printer Maintenance</span>
+                <span><i class="fas fa-network-wired"></i>Basic Networking</span>
             </div>
         </div>
     </div>
@@ -78,36 +82,52 @@
         <h3>MY CURRENT TECH STACK</h3>
 
         <div class="tech-icons">
-            <div class="tech-icon-card js"><i class="fa-brands fa-js"></i></div>
-            <div class="tech-icon-card github"><i class="fa-brands fa-github"></i></div>
-            <div class="tech-icon-card mysql"><i class="fa-solid fa-database"></i></div>
-            <div class="tech-icon-card git"><i class="fa-brands fa-git-alt"></i></div>
+            <div class="tech-icon-card js" data-tooltip="JavaScript"><i class="fa-brands fa-js"></i></div>
+            <div class="tech-icon-card github" data-tooltip="GitHub"><i class="fa-brands fa-github"></i></div>
+            <div class="tech-icon-card mysql" data-tooltip="MySQL"><i class="fa-solid fa-database"></i></div>
+            <div class="tech-icon-card git" data-tooltip="Git"><i class="fa-brands fa-git-alt"></i></div>
         </div>
 
         <div class="tech-quote">
-            <p>My hands are ready, my will is wide. To learn, to stretch, to grow.</p>
-            <p>For the greatest skill I hold inside is the hunger to always know.</p>
+            <p>My hands are ready, and my drive knows no limits always learning, always pushing, always growing.</p>
+            <p>My greatest strength is not what I already know, but the hunger to keep improving, to keep building, and to never stop learning.</p>
         </div>
     </section>
-    </section>
+</section>
 
 <!-- ===== CERTIFICATES ===== -->
-<section id="certificates" class="section container">
-    <h2>Certificates</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <div class="project-image">
-                <i class="fas fa-certificate" style="font-size: 4rem; color: var(--primary);"></i>
-            </div>
-            <h3>Certificates Coming Soon</h3>
-            <p>Certificates and achievements will be displayed here.</p>
+<section class="certificates" id="certificates">
+    <h2 class="certificates-title">MY CERTIFICATES</h2>
+
+    <div class="certificates-grid">
+        <div class="certificate-item full-width" data-certificate="on">
+            UNDERSTANDING PROMPT ENGINEERING
         </div>
+        
+        <div class="certificate-item half-width" data-certificate="in">
+            CYBERSECURITY BASICS
+        </div>
+        <div class="certificate-item half-width" data-certificate="un">
+            PROJECT MANAGEMENT FUNDAMENTALS
+        </div>
+        
+        <div class="certificate-item full-width" data-certificate="an">
+            UNDERSTANDING DATA VISUALIZATION
+        </div>
+
+        <div class="certificate-item full-width" data-certificate="enz">
+            INTRODUCTION TO DATA
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="certificateModal">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <img class="modal-image" id="modalImage" src="" alt="Certificate Preview">
     </div>
 </section>
 
 <!-- ===== PROJECTS ===== -->
 <section id="projects" class="section container">
-
     <h2>Projects</h2>
 
     <div class="projects-grid">
@@ -176,5 +196,6 @@
 <div id="footer-placeholder"></div>
 
 <script src="js/script.js"></script>
+<script src="js/certificate.js"></script>
 </body>
 </html>
