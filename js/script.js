@@ -88,6 +88,31 @@ async function loadComponent(placeholderId, componentPath, componentName) {
     const placeholder = document.getElementById(placeholderId);
     if (!placeholder) return;
 
+    const fallbackComponents = {
+        navbar: `
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <h2 class="logo">ZKT</h2>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="#projects"><i class="fas fa-folder"></i> Projects</a></li>
+            <li><a href="#resume"><i class="fas fa-file-pdf"></i> Resume</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <button class="dark-btn" id="themeBtn">🌙</button>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>`,
+        footer: `
+<footer>
+    <p>© 2026 Zean Kyle C. Tapac</p>
+</footer>`
+    };
+
     try {
         const response = await fetch(componentPath);
         if (!response.ok) {
@@ -97,6 +122,9 @@ async function loadComponent(placeholderId, componentPath, componentName) {
         placeholder.innerHTML = await response.text();
     } catch (error) {
         console.error(error);
+        if (fallbackComponents[componentName]) {
+            placeholder.innerHTML = fallbackComponents[componentName];
+        }
     }
 }
 
