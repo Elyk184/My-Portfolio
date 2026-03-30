@@ -115,6 +115,138 @@ body {
     color: var(--primary);
 }
 
+/* ===== SKILLS ===== */
+
+.skills-section {
+    padding-top: 20px;
+}
+
+.skills-section h2 {
+    color: var(--primary);
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.skills-intro {
+    color: #d4ddf3;
+    font-size: 1.22rem;
+    line-height: 1.65;
+    font-weight: 500;
+    margin-bottom: 34px;
+    max-width: 1200px;
+}
+
+.skills-chip-groups {
+    display: grid;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.skills-chip-group {
+    background: linear-gradient(100deg, rgba(8, 19, 58, 0.9), rgba(10, 31, 84, 0.65));
+    border: 1px solid rgba(84, 122, 214, 0.35);
+    border-radius: 14px;
+    padding: 22px 20px;
+}
+
+.skills-chip-group h3 {
+    color: #f2f7ff;
+    margin-bottom: 14px;
+    font-size: 1.8rem;
+}
+
+.skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-chips span {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: linear-gradient(120deg, #1f70ff, #2f57c5);
+    color: #ffffff;
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+.tech-stack-showcase {
+    margin-top: 18px;
+    background: linear-gradient(100deg, #090f35 0%, #0b1444 55%, #080d2f 100%);
+    border-radius: 16px;
+    padding: 34px 32px 30px;
+}
+
+.tech-stack-showcase h3 {
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    margin-bottom: 28px;
+    font-weight: 700;
+}
+
+.tech-icons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(110px, 1fr));
+    gap: 28px;
+    justify-items: center;
+    margin-bottom: 26px;
+}
+
+.tech-icon-card {
+    width: 128px;
+    height: 128px;
+    border-radius: 18px;
+    background: #f3f4f6;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tech-icon-card i {
+    font-size: 4.2rem;
+}
+
+.tech-icon-card.js i {
+    color: #e9d84d;
+}
+
+.tech-icon-card.github i {
+    color: #0f0f0f;
+}
+
+.tech-icon-card.mysql i {
+    color: #17a7cf;
+}
+
+.tech-icon-card.git i {
+    color: #f15b2a;
+}
+
+.tech-quote {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgba(10, 23, 61, 0.95), rgba(7, 28, 71, 0.78));
+    border-radius: 14px;
+    border-left: 5px solid #00e8ff;
+    padding: 24px 28px;
+}
+
+.tech-quote p {
+    color: #00e8ff;
+    font-size: 1.85rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.tech-quote p:last-child {
+    margin-bottom: 0;
+}
+
 /* ===== PROJECTS ===== */
 
 .section {
@@ -176,23 +308,86 @@ body {
     font-weight: 600;
 }
 
-/* ===== SOCIAL ===== */
-.socials {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+/* ===== CONTACT ===== */
+.contact-section {
+    position: relative;
 }
 
-.social-btn {
-    padding: 10px 18px;
-    border-radius: 12px;
-    color: white;
+.contact-intro {
+    color: #d4ddf3;
+    max-width: 720px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.social-card {
+    display: grid;
+    grid-template-columns: 52px 1fr auto;
+    align-items: center;
+    gap: 12px;
     text-decoration: none;
+    padding: 16px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(100, 138, 228, 0.25);
+    background: linear-gradient(120deg, rgba(9, 24, 66, 0.92), rgba(13, 36, 95, 0.72));
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.social-btn.facebook { background: #1877f2; }
-.social-btn.instagram { background: #e1306c; }
-.social-btn.github { background: #333; }
+.social-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(32, 214, 243, 0.6);
+    box-shadow: 0 16px 30px rgba(5, 12, 35, 0.45);
+}
+
+.social-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 1.45rem;
+    color: #fff;
+}
+
+.social-content {
+    display: grid;
+}
+
+.social-content strong {
+    color: #f2f7ff;
+    font-size: 1.15rem;
+    line-height: 1.25;
+}
+
+.social-content small {
+    color: #9eb1df;
+    font-size: 0.92rem;
+    margin-top: 4px;
+}
+
+.social-arrow {
+    color: #9eb1df;
+    font-size: 0.9rem;
+}
+
+.social-card.facebook .social-icon {
+    background: linear-gradient(135deg, #2f7fff, #1b4fb8);
+}
+
+.social-card.instagram .social-icon {
+    background: linear-gradient(135deg, #fe8f39, #d82a7b 55%, #6d2cdd);
+}
+
+.social-card.github .social-icon {
+    background: linear-gradient(135deg, #232938, #0f1118);
+}
 
 footer {
     text-align: center;
@@ -228,6 +423,87 @@ footer {
     .about-hero p {
         font-size: 1rem;
         margin-bottom: 14px;
+    }
+
+    .skills-intro {
+        font-size: 1rem;
+        margin-bottom: 22px;
+    }
+
+    .skills-chip-group {
+        padding: 16px 14px;
+    }
+
+    .skills-chip-group h3 {
+        font-size: 1.25rem;
+    }
+
+    .skill-chips span {
+        font-size: 0.95rem;
+        padding: 7px 12px;
+    }
+
+    .tech-stack-showcase {
+        padding: 24px 16px;
+    }
+
+    .tech-stack-showcase h3 {
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+        margin-bottom: 18px;
+    }
+
+    .tech-icons {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        gap: 18px;
+    }
+
+    .tech-icon-card {
+        width: 100px;
+        height: 100px;
+        border-radius: 14px;
+    }
+
+    .tech-icon-card i {
+        font-size: 3rem;
+    }
+
+    .tech-quote {
+        padding: 14px 14px;
+    }
+
+    .tech-quote p {
+        font-size: 1.05rem;
+        line-height: 1.4;
+    }
+
+    .contact-intro {
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .social-card {
+        grid-template-columns: 46px 1fr auto;
+        padding: 14px 12px;
+    }
+
+    .social-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.2rem;
+    }
+
+    .social-content strong {
+        font-size: 1rem;
+    }
+
+    .social-content small {
+        font-size: 0.82rem;
     }
 
     .section {
