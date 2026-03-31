@@ -784,3 +784,110 @@ footer {
     }
 }
 
+.home.home-hero {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.home-stars {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,.75), transparent 60%),
+        radial-gradient(2px 2px at 80% 20%, rgba(255,255,255,.7), transparent 60%),
+        radial-gradient(1.5px 1.5px at 70% 75%, rgba(255,255,255,.6), transparent 60%),
+        radial-gradient(1.5px 1.5px at 35% 65%, rgba(255,255,255,.6), transparent 60%),
+        radial-gradient(2px 2px at 55% 45%, rgba(255,255,255,.55), transparent 60%);
+    opacity: .35;
+    animation: starFloat 14s linear infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes starFloat {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-18px); }
+}
+
+.hero-center {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 980px;
+    margin-inline: auto;
+    padding: 2rem 1rem;
+}
+
+.hero-mini-name {
+    letter-spacing: .2em;
+    opacity: .75;
+    margin-top: .25rem;
+    margin-bottom: 1rem;
+    font-size: .95rem;
+}
+
+.hero-desc {
+    max-width: 760px;
+    margin: 1rem auto 0;
+    opacity: .85;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    margin-top: 1.6rem;
+    display: flex;
+    gap: .9rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    padding: .8rem 1.2rem;
+    border: 2px solid #23d5ff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: .25s ease;
+}
+
+.hero-btn-primary {
+    background: rgba(35, 213, 255, .12);
+    color: #eaf7ff;
+}
+
+.hero-btn-primary:hover {
+    background: rgba(35, 213, 255, .25);
+    transform: translateY(-2px);
+}
+
+.hero-btn-outline {
+    border-color: #00d08f;
+    color: #dffff4;
+    background: rgba(0, 208, 143, .08);
+}
+
+.hero-btn-outline:hover {
+    background: rgba(0, 208, 143, .2);
+    transform: translateY(-2px);
+}
+
+.hero-social {
+    margin-top: 1.3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.1rem;
+}
+
+.hero-social a {
+    color: #c9d3df;
+    font-size: 1.6rem;
+    transition: .2s ease;
+}
+
+.hero-social a:hover {
+    color: #23d5ff;
+    transform: translateY(-2px);
+}
+
